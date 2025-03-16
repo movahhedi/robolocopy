@@ -1,4 +1,4 @@
-# RoboCopy CLI
+# Robolocopy CLI
 
 A cross-platform file copying utility with glob pattern exclusions, inspired by Windows' robocopy.
 
@@ -17,7 +17,7 @@ robolocopy <input-path> <output-path> [-x <exclude-glob>,<exclude-glob>,...] [-X
 Or specify multiple exclude patterns individually:
 
 ```bash
-robolocopy <input-path> <output-path> [-x <exclude-glob>] [-x <exclude-glob>]
+robolocopy <input-path> <output-path> [-x <exclude-glob>] [-x <exclude-glob>] [-X] [-V]
 ```
 
 ### Options
@@ -32,22 +32,20 @@ robolocopy <input-path> <output-path> [-x <exclude-glob>] [-x <exclude-glob>]
 
 By default, the following patterns are excluded:
 
-- node_modules/**
-- dist/**
-- build/**
-- temp/**
-- delete/**
-- tmp/**
-- .git/**
-- .DS_Store
-- coverage/**
-- .cache/**
-- .idea/**
-- .vscode/**
-- *.log
-- *.lock
-- *.tgz
-- *.tar.gz
+- `node_modules/**`
+- `dist/**`
+- `build/**`
+- `temp/**`
+- `delete/**`
+- `bin/**`
+- `obj/**`
+- `cache/**`
+- `tmp/**`
+- `.DS_Store`
+- `coverage/**`
+- `.cache/**`
+- `.idea/**`
+- `*.log`
 
 ## Examples
 
@@ -59,6 +57,10 @@ robolocopy ./source ./destination -x "node_modules/**"
 Copy with multiple exclusions:
 ```bash
 robolocopy ./source ./destination -x "*.log" -x "temp/**"
+```
+or comma-separated
+```bash
+robolocopy ./source ./destination -x "node_modules,docs"
 ```
 
 Copy with verbose output:
