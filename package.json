@@ -5,7 +5,9 @@
 	"packageManager": "yarn@4.7.0",
 	"type": "module",
 	"main": "./dist/index.js",
-	"bin": "./dist/index.js",
+	"bin": {
+		"robolocopy": "./dist/index.js"
+	},
 	"files": [
 		"dist"
 	],
@@ -16,7 +18,7 @@
 		"build": "tsc",
 		"dev": "tsc --watch",
 		"lint": "eslint src --ext .ts",
-		"prepublishOnly": "npm run build",
+		"prepublishOnly": "yarn build",
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"test:coverage": "vitest run --coverage"
