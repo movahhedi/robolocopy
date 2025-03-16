@@ -1,6 +1,6 @@
 {
 	"name": "robolocopy",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A cross-platform file copying utility with glob pattern exclusions",
 	"packageManager": "yarn@4.7.0",
 	"type": "module",
@@ -32,7 +32,16 @@
 		"glob",
 		"exclude"
 	],
-	"author": "",
+	"author": {
+		"name": "Shahab Movahhedi",
+		"email": "dev@shmovahhedi.com",
+		"url": "https://shmovahhedi.com"
+	},
+	"homepage": "https://github.com/movahhedi/robolocopy",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/movahhedi/robolocopy"
+	},
 	"license": "MIT",
 	"dependencies": {
 		"chalk": "^5.4.1",
